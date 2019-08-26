@@ -7,11 +7,84 @@
 </head>
 
 <script>
+    "use strict"
+    console.log("Hello!")
 
+    //1
+    function prost(k) {
+        if (k % 1 == 0 && k > 1) {
+            let j = k - 1;
+            while (j > 1) {
+                if (k % j == 0) {
+                    return false;
+                }
+                j--;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    var i = 0;
+    console.log("1. Простые числа от 0 до 100:");
+
+    while (i++ < 100) {
+        if (prost(i)) {
+            console.log(i + "; ");
+        }
+    }
+
+    //2
+    console.log("2. В корзине 5 товаров по цене:");
+    var arrCart = new Array();
+    var summ = 0;
+    for (let i = 0; i < 5; i++) {
+        arrCart.push(Math.floor(Math.random() * 700 + 300));
+        console.log(" " + arrCart[i] + " руб.");
+        summ += arrCart[i];
+    }
+    console.log("------------------");
+    console.log(" Сумма : " + summ + " руб.");
+
+    //3
+    console.log("3. В корзине 3 товаров по цене:");
+
+    function countBasketPrice(arr) {
+        if (arr != null) {
+            let summ = 0;
+            for (let i = 0; i < 3; i++) {
+                arr.push(Math.floor(Math.random() * 700 + 300));
+                console.log(" " + arr[i] + " руб.");
+                summ += arr[i];
+            }
+            return summ;
+        }
+        return 0;
+    }
+    var arrCart = new Array();
+
+    for (let i = 0; i < 3; i++) {
+        arrCart.push(Math.floor(Math.random() * 700 + 300));
+    }
+    var summ = countBasketPrice(arrCart);
+    console.log("------------------");
+    console.log(" Сумма : " + summ + " руб.");
+
+    //4
+    console.log("4 задание:");
+    for (let i = 0; i < 10; console.log(i++)) {};
+
+    //5
+    console.log("5 задание:");
+    var t = 'x';
+    for (let i = 0; i < 20; i++) {
+        console.log(t +='x');
+        if (i==19) console.log("Bye!!!!");
+    };
 </script>
 
 <body>
     <h1>Hello!</h1>
-</body>
-
-</html>
+</body></html>
